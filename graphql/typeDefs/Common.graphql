@@ -1,0 +1,14 @@
+scalar ObjectID
+
+scalar Date
+scalar DateTime
+scalar LocalDate
+
+scalar EmailAddress
+
+scalar PhoneNumber
+
+scalar Latitude
+scalar Longitude
+
+scalar Void

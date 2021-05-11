@@ -1,0 +1,116 @@
+enum Gender {
+    MALE
+    FEMALE
+}
+
+type Name {
+    displayName: String
+    firstName: String
+    lastName: String
+}
+
+input NameInput {
+    displayName: String
+    firstName: String
+    lastName: String
+}
+
+type Phone {
+    data: PhoneNumber
+    label: String
+}
+
+input PhoneInput {
+    data: PhoneNumber
+    label: String
+}
+
+type Email {
+    data: EmailAddress
+    label: String
+}
+
+input EmailInput {
+    data: EmailAddress
+    label: String
+}
+
+type Address {
+    line1: String
+    line2: String
+    country: String
+    postalcode: String
+    label: String
+}
+
+input AddressInput {
+    line1: String
+    line2: String
+    country: String
+    postalcode: String
+    label: String
+}
+
+type Device {
+    deviceid: String
+}
+
+input DeviceInput {
+    deviceid: String
+}
+
+type User {
+    id: ID
+    username: String
+    password: String
+    token: String
+    roles: [String]
+
+    name: Name
+    birthdate: Date
+    gender: Gender
+
+    contactnos: [Phone]
+    emails: [Email]
+    addresses: [Address]
+    devices: [Device]
+
+    lostitems: [LostItem]
+    founditems: [FoundItem]
+
+    status: String
+    rank: String
+    signupdate: Date
+}
+
+input UserInput {
+    username: String
+    password: String
+    roles: [String]
+
+    name: NameInput
+    birthdate: Date
+    gender: Gender
+
+    contactnos: [PhoneInput]
+    emails: [EmailInput]
+    addresses: [AddressInput]
+    devices: [DeviceInput]
+
+    status: String
+    rank: String
+    signupdate: DateTime
+}
+
+type Query {
+    user(id: ID!): User
+    users: [User]
+    me: User
+}
+
+type Mutation {
+    createUser(userInput: UserInput): User
+    updateUser(id: ID!, userInput: UserInput): User
+    deleteUser(id: ID!): User
+    login(username: String, password: String): User
+}
