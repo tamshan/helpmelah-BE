@@ -1,4 +1,4 @@
-# Choose the Image which has Node installed already
+# Choose the Image which has Node installed already-Demotest
 FROM node:latest
 
 # COPY all the files from Current Directory into the Container-test after successfull build
