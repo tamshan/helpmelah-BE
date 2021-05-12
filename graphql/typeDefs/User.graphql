@@ -84,7 +84,7 @@ type User {
 }
 
 input UserInput {
-    username: String
+    username: String!
     password: String
     roles: [String]
 
