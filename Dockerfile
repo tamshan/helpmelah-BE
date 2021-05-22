@@ -1,4 +1,4 @@
-# Choose the Image which has Node installed already-Demotest1
+# Choose the Image which has Node installed already-Demotest3
 FROM node:latest
 
 # COPY all the files from Current Directory into the Container-test after successfull build
@@ -6,6 +6,7 @@ COPY ./ ./
 
 # Install the Project Dependencies like Express Framework
 RUN npm install
+RUN npm test
 
 # Tell that this image is going to Open a Port 
 EXPOSE 8082
