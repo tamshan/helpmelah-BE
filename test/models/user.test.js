@@ -48,7 +48,7 @@ describe('User Model Test', () => {
     expect(savedUser.gender).toBe(userData.gender)
     expect(savedUser.contactnos).toEqual(
       expect.arrayContaining([
-        expect.objectContaining({ data: '99552888', label: 'Mobile' })
+        expect.objectContaining({ data: '99552888', label: 'mobile' })
       ])
     )
     expect(savedUser.emails).toEqual(
