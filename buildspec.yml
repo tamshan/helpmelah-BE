@@ -9,8 +9,8 @@ phases:
     commands:
       - echo Build started on `date`
       - echo Building the Docker image...          
-      - docker build -t landfbe-doc-rep:latest .
-      - docker tag landfbe-doc-rep:latest 441184683115.dkr.ecr.ap-southeast-1.amazonaws.com/helpmelah-be-new:latest      
+      - docker build -t helpmelah-be-new:latest .
+      - docker tag helpmelah-be-new:latest 441184683115.dkr.ecr.ap-southeast-1.amazonaws.com/helpmelah-be-new:latest      
   post_build:
     commands:
       - echo Build completed on `date`
