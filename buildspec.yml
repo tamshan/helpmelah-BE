@@ -16,7 +16,7 @@ phases:
       - echo Build completed on `date`
       - echo Pushing the Docker image...
       - docker push 441184683115.dkr.ecr.ap-southeast-1.amazonaws.com/helpmelah-be-new:latest
-  artifacts :
-     files:
-       - "**/*"
-       name: lost-and-found-be-artifacts
+  # artifacts :
+  #    files:
+  #      - "**/*"
+  #      name: lost-and-found-be-artifacts
